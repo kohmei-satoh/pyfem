@@ -13,4 +13,3 @@ https://chatgpt.com/share/671496ae-8fbc-800b-bce7-a3a3cd5ea8f6
 * Use *pyNastran* for inputting and outputting at first.
 * Use *VTK* for these in the future.
 
-* test
