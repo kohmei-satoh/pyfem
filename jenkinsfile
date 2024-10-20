@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build C++') {
+            steps {
+                sh 'cd cpp_code && make'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'pytest tests/'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'docker build -t my_project .'
+                sh 'docker push my_project'
+            }
+        }
+    }
+}
